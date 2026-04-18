@@ -39,7 +39,7 @@ Schedule Trigger → HTTP Request → IF Condition → Email Alert
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 - Multi-website monitoring
 - Telegram/Discord alerts
 - Response time tracking
@@ -48,5 +48,4 @@ Schedule Trigger → HTTP Request → IF Condition → Email Alert
 
 ---
 
-## 🧑‍💻 Author
 Built as a learning project exploring DevOps automation and workflow engineering using n8n.
