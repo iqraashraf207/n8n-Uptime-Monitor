@@ -1,51 +1,37 @@
-# Uptime Monitoring & Alert System (n8n)
+# Website Uptime Monitor & Alert System
 
-## Overview
-This project is a simple but powerful automation system built using n8n that monitors website availability and sends real-time alerts when a failure is detected.
-
-It simulates a basic DevOps monitoring pipeline used in real-world production systems.
+An automated workflow that monitors website availability and sends real-time email alerts on downtime detection, built with n8n.
 
 ---
 
-## How it works
-The workflow runs on a schedule and performs the following steps:
+## How it Works
 
-1. Schedule Trigger runs every 5 minutes  
-2. HTTP Request checks if the target website is reachable  
-3. IF condition verifies HTTP status code  
-4. Gmail node sends alert email if the site is down  
+    Schedule Trigger → HTTP Request → IF Condition → Gmail Alert
+
+1. Schedule trigger runs every 5 minutes
+2. HTTP request checks if the target website is reachable
+3. IF condition evaluates the HTTP status code
+4. Gmail node sends an alert email if the site is down
 
 ---
 
 ## Tech Stack
-- n8n (Workflow Automation)
-- HTTP Request Node
-- Gmail API (OAuth2)
-- Docker (for local deployment)
 
----
-
-## Workflow Architecture
-Schedule Trigger → HTTP Request → IF Condition → Email Alert
+`n8n` `HTTP Request Node` `Gmail API (OAuth2)` `Docker`
 
 ---
 
 ## Features
-- Automated uptime monitoring
+
+- Automated uptime checks on a configurable schedule
 - Real-time email alerts on failure
-- Fully no-code workflow automation
-- Easily extendable to multiple websites
-- Beginner-friendly DevOps simulation project
+- Easily extendable to monitor multiple websites
 
 ---
 
-## Future Improvements
-- Multi-website monitoring
-- Telegram/Discord alerts
-- Response time tracking
-- Logging system for failures
-- Cloud deployment (AWS/DigitalOcean)
+## Setup
 
----
-
-Built as a learning project exploring DevOps automation and workflow engineering using n8n.
+1. Install and run n8n locally or via Docker
+2. Import the workflow JSON into your n8n instance
+3. Configure the target URL and Gmail OAuth2 credentials
+4. Activate the workflow
